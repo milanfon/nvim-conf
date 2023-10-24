@@ -19,15 +19,15 @@ require('lspconfig').texlab.setup{
     filetypes = {"tex", "bib"},
     settings = {
         texlab = {
-            build = {
-                executable = "pdflatex",
-                isContinuous = true,
-                onSave = true
-            },
-            chktex = {
-                onEdit = true,
-                onOpenAndSave = true,
-            },
+--            build = {
+--                executable = "pdflatex",
+--                isContinuous = true,
+--                onSave = true
+--            },
+--            chktex = {
+--                onEdit = true,
+--                onOpenAndSave = true,
+--            },
         }
     }
 }

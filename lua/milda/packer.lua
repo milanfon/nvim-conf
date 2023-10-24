@@ -61,4 +61,10 @@ return require('packer').startup(function(use)
 
   use 'JuliaEditorSupport/julia-vim'
 
+  use 'tpope/vim-fugitive'
+
+  --- use 'airblade/vim-gitgutter'
+  
+  use 'lewis6991/gitsigns.nvim'
+
   end)

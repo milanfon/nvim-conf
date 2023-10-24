@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/milan/.local/share/nvim/site/pack/packer/start/everforest-nvim",
     url = "https://github.com/neanias/everforest-nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/milan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["julia-vim"] = {
     loaded = true,
     path = "/Users/milan/.local/share/nvim/site/pack/packer/start/julia-vim",
@@ -164,6 +169,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/milan/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/milan/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vscode-js-debug"] = {
     loaded = false,
