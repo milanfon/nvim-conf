@@ -1,12 +1,5 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>b", function ()
-    if vim.opt.background:get() == 'light' then
-	    vim.opt.background = 'dark'
-    else
-	    vim.opt.background = 'light'
-    end
-end)
 
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
 
@@ -26,5 +19,12 @@ vim.keymap.set("n", "<leader>ž", ":tabn 6<CR>")
 vim.keymap.set("n", "<leader>tn", vim.cmd.tabnew) 
 vim.keymap.set("n", "<leader>tc", vim.cmd.tabclose) 
 
+vim.keymap.set("n", "<leader>tw", ":belowright 15split | term<CR>")
+
 vim.keymap.set("n", "<C-n>", ":cnext<CR>")
 vim.keymap.set("n", "<C-p>", ":cprev<CR>")
+
+-- Git
+vim.keymap.set("n", "<leader>ga", ":Gwrite<CR>")
+vim.keymap.set("n", "<leader>gc", ":Git commit<CR>")
+vim.keymap.set("n", "<leader>gp", ":Git push<CR>")

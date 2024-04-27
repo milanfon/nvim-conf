@@ -7,6 +7,13 @@ end)
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 cmp.setup({
+    sources = {
+        {name = 'buffer'},
+        {name = 'path'}
+    }
+})
+
+lsp.setup_nvim_cmp({
     mapping = {
         ['<S-j>'] = cmp.mapping.select_prev_item(cmp_select),
         ['<S-k>'] = cmp.mapping.select_next_item(cmp_select),
@@ -30,6 +37,10 @@ require('lspconfig').texlab.setup{
 --            },
         }
     }
+}
+
+require('lspconfig').clangd.setup{
+    filetypes = {"c", "cpp", "h", "hpp", "cl"}
 }
 
 lsp.setup()
