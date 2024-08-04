@@ -26,5 +26,7 @@ vim.keymap.set("n", "<C-p>", ":cprev<CR>")
 
 -- Git
 vim.keymap.set("n", "<leader>ga", ":Gwrite<CR>")
+vim.keymap.set("n", "<leader>gA", ":Git add ")
 vim.keymap.set("n", "<leader>gc", ":Git commit<CR>")
-vim.keymap.set("n", "<leader>gp", ":Git push<CR>")
+vim.keymap.set("n", "<leader>gp", ":Git push ")
+vim.keymap.set("n", "<leader>gs", ":Git status<CR>")

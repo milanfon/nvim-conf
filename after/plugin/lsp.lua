@@ -8,6 +8,7 @@ local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 cmp.setup({
     sources = {
+        {name = 'nvim_lsp'},
         {name = 'buffer'},
         {name = 'path'}
     }
@@ -15,8 +16,8 @@ cmp.setup({
 
 lsp.setup_nvim_cmp({
     mapping = {
-        ['<S-j>'] = cmp.mapping.select_prev_item(cmp_select),
-        ['<S-k>'] = cmp.mapping.select_next_item(cmp_select),
+        ['<S-k>'] = cmp.mapping.select_prev_item(cmp_select),
+        ['<S-j>'] = cmp.mapping.select_next_item(cmp_select),
         ['<Tab>'] = cmp.mapping.confirm({select = true}),
         ['<C-Space>'] = cmp.mapping.complete()
     }
