@@ -24,9 +24,20 @@ vim.keymap.set("n", "<leader>tw", ":belowright 15split | term<CR>")
 vim.keymap.set("n", "<C-n>", ":cnext<CR>")
 vim.keymap.set("n", "<C-p>", ":cprev<CR>")
 
+vim.keymap.set("n", "§", [[:lua RemoveLastChar()<CR>]], {noremap = true, silent = true})
+
 -- Git
 vim.keymap.set("n", "<leader>ga", ":Gwrite<CR>")
 vim.keymap.set("n", "<leader>gA", ":Git add ")
 vim.keymap.set("n", "<leader>gc", ":Git commit<CR>")
 vim.keymap.set("n", "<leader>gp", ":Git push ")
 vim.keymap.set("n", "<leader>gs", ":Git status<CR>")
+
+-- Functions
+function RemoveLastChar()
+    local line = vim.api.nvim_get_current_line()
+    local line_number = vim.api.nvim_win_get_cursor(0)[1]
+    if #line > 0 then
+        vim.api.nvim_set_current_line(line:sub(1, -2))
+    end
+end
