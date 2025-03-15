@@ -44,4 +44,16 @@ require('lspconfig').clangd.setup{
     filetypes = {"c", "cpp", "h", "hpp", "cl"}
 }
 
+lsp.configure('emmet_ls', {
+    filetypes = { 'html', 'css', 'typescriptreact', 'javascriptreact', 'javascript', 'typescript', 'javascript.jsx', 'typescript.tsx', 'sass', 'scss', 'less' },
+    init_options = {
+        html = {
+            options = {
+                -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+                ["bem.enabled"] = true,
+            },
+        },
+    }
+})
+
 lsp.setup()
